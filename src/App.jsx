@@ -79,6 +79,10 @@ export default function App() {
     }
   };
 
+  const completedCount = tasks.filter((t) => t.completed).length;
+  const pendingCount = tasks.length - completedCount;
+  const progressPercent = tasks.length > 0 ? Math.round((completedCount / tasks.length) * 100) : 0;
+
   return (
     <div className="container">
       <header className="header">
@@ -88,6 +92,28 @@ export default function App() {
           Practice Git commands from basics to advanced on this live full-stack application!
         </p>
       </header>
+
+      {/* Feature: Task Statistics Dashboard */}
+      <section className="stats-dashboard">
+        <div className="stat-card">
+          <span className="stat-label">Total Tasks</span>
+          <span className="stat-value">{tasks.length}</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-label">Completed</span>
+          <span className="stat-value text-success">{completedCount}</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-label">Pending</span>
+          <span className="stat-value text-warning">{pendingCount}</span>
+        </div>
+        <div className="progress-container">
+          <div className="progress-bar-bg">
+            <div className="progress-bar-fill" style={{ width: `${progressPercent}%` }}></div>
+          </div>
+          <span className="progress-text">{progressPercent}% Completed</span>
+        </div>
+      </section>
 
       {serverError && (
         <div className="alert-banner">

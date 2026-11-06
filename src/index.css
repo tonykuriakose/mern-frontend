@@ -199,3 +199,76 @@ body {
   padding: 2rem 0;
 }
 
+/* Feature: Task Statistics Dashboard */
+.stats-dashboard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f0f6fc;
+}
+
+.text-success {
+  color: #3fb950;
+}
+
+.text-warning {
+  color: #d29922;
+}
+
+.progress-container {
+  grid-column: span 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 8px;
+  background-color: #21262d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  min-width: 90px;
+  text-align: right;
+}
+
+
