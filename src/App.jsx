@@ -88,8 +88,9 @@ export default function App() {
       <header className="header">
         <div className="badge">MERN Stack Project</div>
         <h1>Git & GitHub Learning Playground</h1>
-      <p className="subtitle">
-  Version 2.0: Maintained by Full Stack Solutions Team!
+
+<p className="subtitle">
+  Version 2.0: Mastered by Tony Kuriakose & Maintained by Full Stack Solutions Team!
 </p>
       </header>
 
